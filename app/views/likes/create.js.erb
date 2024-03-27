@@ -1,0 +1,11 @@
+var existingLikes = $("#photo_<%= @like.photo.id %>_likes");
+
+var updatedLikes = "<%= j(render "photos/likes", photo: @like.photo) %>";
+
+existingLikes.replaceWith(updatedLikes);
+
+var icon = $("#<%= dom_id(@like) %>_icon");
+console.log(icon);
+
+icon.addClass("fa-beat");
+icon.css("--fa-animation-duration", "2s")

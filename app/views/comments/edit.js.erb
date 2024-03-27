@@ -1,2 +1,2 @@
 // app/views/comments/edit.js.erb
-$("#<%= dom_id(@comment) %>").replaceWith("<%= j(render "comments/form", comment: @comment) %>");
+$("#<%= dom_id(@comment) %>").replaceWith("<%= escape_javascript(render "comments/form", comment: @comment) %>");
