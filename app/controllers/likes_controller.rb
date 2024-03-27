@@ -40,8 +40,7 @@ class LikesController < ApplicationController
     respond_to do |format|
       if @like.update(like_params)
         format.html { redirect_to @like, notice: "Like was successfully updated." }
-        format.json { render :show, status: :ok, location: @like }
-        
+        format.json { render :show, status: :ok, location: @like }        
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @like.errors, status: :unprocessable_entity }
@@ -55,9 +54,7 @@ class LikesController < ApplicationController
     respond_to do |format|
       format.html { redirect_back fallback_location: root_url, notice: "Like was successfully destroyed." }
       format.json { head :no_content }
-      format.js
-
-      
+      format.js      
     end
   end
 
