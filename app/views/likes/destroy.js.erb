@@ -1,0 +1,7 @@
+// app/views/likes/destroy.js.erb
+
+var existingLikes = $("#photo_<%= @like.photo.id %>_likes");
+
+var updatedLikes = "<%= j(render "photos/likes", photo: @like.photo) %>";
+
+existingLikes.replaceWith(updatedLikes);
